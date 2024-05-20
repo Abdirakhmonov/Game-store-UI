@@ -30,8 +30,7 @@ class _CreateAccountState extends State<CreateAccount> {
     if (usrname.isNotEmpty &&
         password.length >= 8 &&
         email.endsWith("@gmail.com")) {
-      users.add({"email": _emailcontroller, "password": _passwordcontroller});
-      print(users);
+      users.add({"email": _emailcontroller.text, "password": _passwordcontroller.text});
 
       showDialog(
           context: context,
@@ -77,17 +76,21 @@ class _CreateAccountState extends State<CreateAccount> {
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(
-                    Icons.error,
-                    color: Colors.red,
-                  ),
-                  const Gap(5),
-                  Text(
-                    "Xatolik mavjud!",
-                    style: GoogleFonts.poppins().copyWith(
-                        color: Colors.black,
-                        fontSize: 26,
-                        fontWeight: FontWeight.bold),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.error,
+                        color: Colors.red,
+                      ),
+                      const Gap(5),
+                      Text(
+                        "Xatolik mavjud!",
+                        style: GoogleFonts.poppins().copyWith(
+                            color: Colors.black,
+                            fontSize: 26,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                   const Text(
                       "\nExample\nUsername: yourname\nPassword: 1234abcd min 8 character\nEmail: yourname@gmail.com")
@@ -204,6 +207,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       fontWeight: FontWeight.w600),
                 ),
               ),
+              const Gap(40),
             ],
           ),
         ),

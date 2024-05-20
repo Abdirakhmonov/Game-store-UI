@@ -14,7 +14,6 @@ import 'package:game_app/pages/wallet_navbar.dart';
 import 'package:game_app/widgets/popupmenubutton.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/cupertino.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -126,13 +125,19 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           width: 70,
           child: FloatingActionButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> const SearchtNavBar()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SearchtNavBar()));
             },
-            child: Icon(Icons.search, color: Colors.white, size: 36,),
+            child: Icon(
+              Icons.search,
+              color: Colors.white,
+              size: 36,
+            ),
             backgroundColor: const Color(0XFF373A6C),
-            shape:
-                RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100)),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100)),
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -156,7 +161,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     style: IconButton.styleFrom(
                         backgroundColor: const Color(0XFF77C164)),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomeNavBar()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeNavBar()));
                     },
                   ),
                   Text(
@@ -179,7 +187,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     style: IconButton.styleFrom(
                         backgroundColor: const Color(0XFF6F5EE2)),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const WalletNavBar()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const WalletNavBar()));
                     },
                   ),
                   Text(
@@ -191,7 +202,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ),
                 ],
               ),
-              const Spacer(flex: 4,),
+              const Spacer(
+                flex: 4,
+              ),
               Column(
                 children: [
                   IconButton.filled(
@@ -202,7 +215,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     style: IconButton.styleFrom(
                         backgroundColor: const Color(0XFF518CFE)),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const AlertsNavBar()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AlertsNavBar()));
                     },
                   ),
                   Text(
@@ -225,7 +241,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     style: IconButton.styleFrom(
                         backgroundColor: const Color(0XFFF56651)),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const SocialNavBar()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SocialNavBar()));
                     },
                   ),
                   Text(
